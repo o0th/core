@@ -1,6 +1,3 @@
-let home = "/home/o0th"
-let core = $"($env.PWD)($home)"
-
 def remove [file] {
   if ($file | path exists) {
     print -n $"Removing file ($file)\n"
@@ -22,7 +19,14 @@ def copy [source, destination] {
 }
 
 #
-# Kitty
+# core
+#
+
+let home = "/home/o0th"
+let core = $"($env.PWD)($home)"
+
+#
+# kitty
 #
 
 let kitty_source = $"($core)/.config/kitty"
@@ -31,14 +35,22 @@ let kitty_destination = $"($home)/.config/kitty"
 remove $kitty_destination
 copy $kitty_source $kitty_destination
 
-
 #
-# Nushell 
+# nushell 
 #
 
 let nushell_source = $"($core)/.config/nushell"
 let nushell_destination = $"($home)/.config/nushell"
 
-
 remove $nushell_destination
 copy $nushell_source $nushell_destination
+
+#
+# ssh config
+#
+
+let ssh_source = $"($core)/.ssh/config"
+let ssh_destination = $"($home)/.ssh/config"
+
+remove $ssh_destination
+copy $ssh_source $ssh_destination
