@@ -1,0 +1,65 @@
+git rm -f .config/nushell/history.txt
+git status
+git add .gitignore
+git status
+git commit -m 'feat: nushell configuration'
+git push -u origin master
+clear
+v
+clear
+exit
+v ~/.config/i3/config
+xinput
+xinput --list-props 2
+xinput list-props 2
+xinput list-props 11
+xinput list-props 16
+xinput
+xinput list-props 2
+xinput list-props 11
+xinput list-props 16
+clear
+xinput
+xinput list-props 2
+xinput set-prop 2 156 0.5 0 0 0 0.5 0 0 0 1
+xinput list-props
+clear
+xinput
+xinput list-props 16
+xinput set-prop 16 156 0.5 0 0 0 0.5 0 0 0 1
+xinput set-prop 16 156 0.25 0 0 0 0.25 0 0 0 1
+v /etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+xinput
+xinput list-props 16
+sudo v /etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+sudo nvim /etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+clear
+exit
+clear
+cat /etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+cd Repositories/github.com/o0th/
+cd core/
+clear
+ls
+ls -al
+cat /etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+mkdir -p etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+mkdir -r etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+mkdir etc/X11/xorg.conf.d/
+ls
+v etc/X11/xorg.conf.d/40-mouse-sensitivity.conf
+git status
+mkdir home/o0th
+cd Repositories/github.com/o0th/core/
+ls
+ls -al
+cp .config/ home/o0th/.config
+ls -al ~/.config/
+clear
+rm -r .config/
+exit
+tmux
+exit
+cd Repositories/github.com/o0th/core/
+ls
+git status
