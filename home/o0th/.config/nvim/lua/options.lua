@@ -22,3 +22,23 @@ vim.opt.signcolumn = 'yes'
 
 -- Do not show mode
 vim.opt.showmode = false
+
+--#region
+vim.opt.breakindent = true
+vim.opt.undofile = true
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+vim.opt.termguicolors = true
+
+-- Set indentation options
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.expandtab = true
+vim.o.shiftwidth = 0
+vim.o.tabstop = 2
+vim.o.copyindent = true
+
+-- Enable filetype plugin and indent
+vim.cmd('filetype plugin indent on')

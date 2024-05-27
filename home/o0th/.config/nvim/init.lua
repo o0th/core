@@ -77,4 +77,17 @@ if string.find(result, 'stylua') == nil then
     on_stdout = on_stdout,
     on_stderr = on_stderr,
   })
+else
+  local autocmd_group = vim.api.nvim_create_augroup('Custom auto-commands', { clear = true })
+
+  vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+    pattern = { '*.lua' },
+    desc = 'Auto-format YAML files after saving',
+    callback = function()
+      local fileName = vim.api.nvim_buf_get_name(0)
+      -- stylua.format_file()
+      vim.cmd(':silent !stylua ' .. fileName)
+    end,
+    group = autocmd_group,
+  })
 end

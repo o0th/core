@@ -58,22 +58,18 @@ return {
       handlers = {
         function(server_name)
           require('lspconfig')[server_name].setup({})
+          require('lspconfig')['lua_ls'].setup({
+            settings = {
+              Lua = {
+                diagnostics = {
+                  globals = { 'vim' },
+                },
+              },
+            },
+          })
         end,
       },
       lua_ls = {},
-    })
-
-    local autocmd_group = vim.api.nvim_create_augroup('Custom auto-commands', { clear = true })
-
-    vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-      pattern = { '*.lua' },
-      desc = 'Auto-format YAML files after saving',
-      callback = function()
-        local fileName = vim.api.nvim_buf_get_name(0)
-        -- stylua.format_file()
-        vim.cmd(':silent !stylua ' .. fileName)
-      end,
-      group = autocmd_group,
     })
   end,
 }
