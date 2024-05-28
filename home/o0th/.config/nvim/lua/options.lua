@@ -15,7 +15,7 @@ vim.opt.number = true
 vim.opt.cursorline = true
 
 -- Clipboard
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = 'unnamed,unnamedplus'
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
@@ -39,6 +39,7 @@ vim.o.expandtab = true
 vim.o.shiftwidth = 0
 vim.o.tabstop = 2
 vim.o.copyindent = true
+vim.o.preserveindent = true
 
 -- Enable filetype plugin and indent
 vim.cmd('filetype plugin indent on')
