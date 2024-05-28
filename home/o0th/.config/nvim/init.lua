@@ -1,6 +1,4 @@
---
 -- Lazyvim
---
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
@@ -17,11 +15,14 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
---
 -- Requires
---
 
 require('options')
 require('keymaps')
-require('lazy').setup('plugins')
+require('lazy').setup('plugins', {
+  change_detection = {
+    notify = false,
+  },
+})
+
 require('stylua')
