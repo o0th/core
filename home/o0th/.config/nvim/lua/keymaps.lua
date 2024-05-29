@@ -1,5 +1,6 @@
 -- Quicksave
 vim.api.nvim_set_keymap('n', '<leader>w', '<cmd>w<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>q<cr>', {})
 
 -- Navigate buffers
 vim.api.nvim_set_keymap('n', '<S-h>', '<cmd>bprev<cr>', {})
